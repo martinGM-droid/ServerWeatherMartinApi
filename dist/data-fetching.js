@@ -1,6 +1,6 @@
 import fs from 'fs/promises'; // добавь импорт
 export async function fetchData(latitude, longitude) {
-    const url = `https://api.open-meteo.com/v1/forecast?latitude=${latitude}&longitude=${longitude}&hourly=temperature_2m,precipitation_probability,precipitation,cloud_cover`;
+    const url = `https://api.open-meteo.com/v1/forecast?latitude=${latitude}&longitude=${longitude}&hourly=temperature_2m,precipitation_probability,precipitation,cloud_cover&timezone=Europe%2FMoscow`;
     try {
         const response = await fetch(url);
         const data = await response.json();

@@ -1,5 +1,4 @@
-import { weatherData } from './index';
-
+import { weatherData } from './index.js';
 export interface WeatherData {
   latitude: number;
   longitude: number;
@@ -24,25 +23,41 @@ export interface WeatherData {
   };
 }
 
+interface WeatherTimeObjectFrontiend{
+    time: string;
+    temperature_2m: number;
+    precipitation_probability: number;
+    precipitation: number;
+    cloud_cover: number;
+}
 
-const {
-  hourly: {
-    time,
-    temperature_2m,
-    precipitation_probability,
-    precipitation,
-    cloud_cover,
+export type WeatherTimeArrayFrontiend = WeatherTimeObjectFrontiend[];
+  
+
+
+
+export async function weatherByTimeObjectCreate():Promise<WeatherTimeArrayFrontiend>  {
+  const {
+    hourly: {
+      time,
+      temperature_2m,
+      precipitation_probability,
+      precipitation,
+      cloud_cover,
+    }
+  } = weatherData;
+  
+  const result: WeatherTimeArrayFrontiend = [];
+
+  for (let i = 0; i < time.length; i++) {
+    result.push({
+      time: time[i],
+      temperature_2m: temperature_2m[i],
+      precipitation_probability: precipitation_probability[i],
+      precipitation: precipitation[i],
+      cloud_cover: cloud_cover[i]
+    });
   }
-} = weatherData;
+  return result
+}
 
-
-console.log('Time:', time);
-console.log('Temperature 2m:', temperature_2m);
-console.log('Precipitation Probability:', precipitation_probability);
-console.log('Precipitation:', precipitation);
-console.log('Cloud Cover:', cloud_cover);
-
-
-// interface WeatherDataByTime {
-
-// }
