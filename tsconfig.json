@@ -1,0 +1,43 @@
+{
+  "compilerOptions": {
+    /* === Основные настройки компиляции === */
+    "target": "ES2022",                   // Целевая версия JS, которую будет генерировать TypeScript
+    "module": "ES2022",                   // Тип модулей — ES (import/export). Совместим с "type": "module" в package.json
+    "moduleResolution": "node",           // Как искать модули — по правилам Node.js
+    "outDir": "./dist",                   // Папка для скомпилированных файлов
+    "rootDir": "./src",                   // Папка с исходным TypeScript-кодом
+    "allowJs": false,                     // Не компилировать .js файлы
+    "checkJs": false,                     // Не проверять .js файлы
+    "sourceMap": false,                   // Не создавать .map файлы (для отладки можно включить)
+
+    /* === Режим строгой типизации === */
+    "strict": true,                       // Включает все строгие проверки
+    "noImplicitAny": true,                // Ошибка при неявном типе any
+    "strictNullChecks": true,             // null и undefined обрабатываются строго
+    "strictFunctionTypes": true,          // Строгая проверка типов функций
+    "strictBindCallApply": true,          // Проверка аргументов для bind/call/apply
+    "alwaysStrict": true,                 // Всегда добавлять 'use strict' в JS
+
+    /* === Проверки безопасности и чистоты кода === */
+    "noUnusedLocals": true,               // Ошибка при неиспользуемых переменных
+    "noUnusedParameters": true,           // Ошибка при неиспользуемых параметрах функций
+    "noImplicitReturns": true,            // Все пути функции должны что-то возвращать
+    "noFallthroughCasesInSwitch": true,   // Запрещает переход между case без break
+
+    /* === Совместимость с другими модулями === */
+    "esModuleInterop": true,              // Разрешает импорт CommonJS модулей через import
+    "forceConsistentCasingInFileNames": true, // Ошибка если использовать разный регистр в путях
+
+    /* === Специально для Node.js === */
+    "types": ["node"],                    // Подключает типы Node.js (fs, path и т.д.)
+    "resolveJsonModule": true,           // Позволяет импортировать .json файлы
+    "isolatedModules": true,             // Требует, чтобы каждый файл был модулем
+    "skipLibCheck": true                 // Пропускает проверку типов в node_modules (ускоряет компиляцию)
+
+    /* === JSX — если используешь React, раскомментируй ниже === */
+    // "jsx": "react-jsx"
+  },
+  "include": ["src"],                     // Включать только исходники из папки src
+  "exclude": ["node_modules", "dist"]     // Исключить эти папки из компиляции
+}
+
