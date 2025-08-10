@@ -1,0 +1,574 @@
+[
+  {
+    "type": "FeatureCollection",
+    "features": [
+      {
+        "type": "Feature",
+        "properties": {
+          "osm_type": "R",
+          "osm_id": 130921,
+          "osm_key": "place",
+          "osm_value": "city",
+          "type": "city",
+          "countrycode": "BY",
+          "name": "Гродна",
+          "country": "Беларусь",
+          "state": "Гродзенская вобласць",
+          "extent": [
+            23.7094451,
+            53.7597785,
+            23.9836193,
+            53.5990636
+          ]
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            23.8342648,
+            53.6834599
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "osm_type": "R",
+          "osm_id": 2261455,
+          "osm_key": "place",
+          "osm_value": "town",
+          "type": "district",
+          "postcode": "965 01",
+          "countrycode": "SK",
+          "name": "Žiar nad Hronom",
+          "country": "Slovensko",
+          "city": "Žiar nad Hronom",
+          "state": "Banskobystrický kraj",
+          "extent": [
+            18.8151208,
+            48.6156651,
+            18.8959573,
+            48.5737263
+          ]
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            18.8500892,
+            48.5910183
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "osm_type": "R",
+          "osm_id": 2261483,
+          "osm_key": "place",
+          "osm_value": "town",
+          "type": "district",
+          "postcode": "965 01",
+          "countrycode": "SK",
+          "name": "Žiar nad Hronom",
+          "country": "Slovensko",
+          "city": "Žiar nad Hronom",
+          "state": "Banskobystrický kraj",
+          "extent": [
+            18.8151208,
+            48.6156651,
+            18.934907,
+            48.5359419
+          ]
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            18.8500892,
+            48.5910183
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "osm_type": "R",
+          "osm_id": 2261418,
+          "osm_key": "place",
+          "osm_value": "village",
+          "type": "district",
+          "postcode": "966 01",
+          "countrycode": "SK",
+          "name": "Hliník nad Hronom",
+          "country": "Slovensko",
+          "city": "Žiar nad Hronom",
+          "state": "Banskobystrický kraj",
+          "extent": [
+            18.7594117,
+            48.5547932,
+            18.8314316,
+            48.5177515
+          ]
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            18.785124,
+            48.5380966
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "osm_type": "R",
+          "osm_id": 440683,
+          "osm_key": "place",
+          "osm_value": "town",
+          "type": "city",
+          "countrycode": "CZ",
+          "name": "Hronov",
+          "country": "Česko",
+          "state": "Severovýchod",
+          "county": "Královéhradecký kraj",
+          "extent": [
+            16.1233275,
+            50.5160946,
+            16.2340587,
+            50.4420763
+          ]
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            16.1820196,
+            50.4799692
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "osm_type": "R",
+          "osm_id": 2261476,
+          "osm_key": "place",
+          "osm_value": "village",
+          "type": "district",
+          "postcode": "966 01",
+          "countrycode": "SK",
+          "name": "Hliník nad Hronom",
+          "country": "Slovensko",
+          "city": "Žiar nad Hronom",
+          "state": "Banskobystrický kraj",
+          "extent": [
+            18.7594117,
+            48.5547932,
+            18.8314316,
+            48.5177515
+          ]
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            18.785124,
+            48.5380966
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "osm_type": "R",
+          "osm_id": 4793598,
+          "osm_key": "aeroway",
+          "osm_value": "aerodrome",
+          "type": "house",
+          "postcode": "231766",
+          "countrycode": "BY",
+          "name": "Аэрапорт Гродна",
+          "country": "Беларусь",
+          "city": "Абухаўскі сельскі Савет",
+          "district": "Абухава",
+          "street": "Садовая вуліца",
+          "state": "Гродзенская вобласць",
+          "county": "Гродзенскі раён",
+          "extent": [
+            24.0419622,
+            53.6157951,
+            24.0584465,
+            53.5798064
+          ]
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            24.050477680915158,
+            53.598213349999995
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "osm_type": "R",
+          "osm_id": 388189,
+          "osm_key": "place",
+          "osm_value": "town",
+          "type": "city",
+          "countrycode": "SK",
+          "name": "Žiar nad Hronom",
+          "country": "Slovensko",
+          "state": "Banskobystrický kraj",
+          "extent": [
+            18.645409,
+            48.769768,
+            19.033438,
+            48.477197
+          ]
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            18.8500892,
+            48.5910183
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "osm_type": "W",
+          "osm_id": 529220272,
+          "osm_key": "waterway",
+          "osm_value": "stream",
+          "type": "other",
+          "countrycode": "IS",
+          "name": "Hróðnýjargil",
+          "country": "Ísland",
+          "county": "Strandabyggð",
+          "extent": [
+            -22.0846683,
+            65.7233117,
+            -22.0641732,
+            65.7040838
+          ]
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -22.0709861,
+            65.7094815
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "osm_type": "R",
+          "osm_id": 12136024,
+          "osm_key": "natural",
+          "osm_value": "water",
+          "type": "other",
+          "countrycode": "IS",
+          "name": "Hróðnýjarvatn",
+          "country": "Ísland",
+          "county": "Borgarbyggð",
+          "extent": [
+            -21.3964856,
+            64.7891315,
+            -21.3885167,
+            64.7862283
+          ]
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -21.392667228091803,
+            64.78770165
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "osm_type": "R",
+          "osm_id": 59273,
+          "osm_key": "boundary",
+          "osm_value": "administrative",
+          "type": "county",
+          "countrycode": "BY",
+          "name": "Гродзенскі раён",
+          "country": "Беларусь",
+          "state": "Гродзенская вобласць",
+          "extent": [
+            23.5115657,
+            53.9700187,
+            24.4571953,
+            53.3714155
+          ]
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            24.182405094993207,
+            53.67060835
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "osm_type": "R",
+          "osm_id": 2217980,
+          "osm_key": "place",
+          "osm_value": "village",
+          "type": "city",
+          "postcode": "935 61",
+          "countrycode": "SK",
+          "name": "Hronovce",
+          "country": "Slovensko",
+          "state": "Nitriansky kraj",
+          "county": "okres Levice",
+          "extent": [
+            18.5878525,
+            48.0336266,
+            18.690847,
+            47.9768406
+          ]
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            18.6550432,
+            48.0070279
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "osm_type": "R",
+          "osm_id": 2217917,
+          "osm_key": "place",
+          "osm_value": "village",
+          "type": "city",
+          "postcode": "935 57",
+          "countrycode": "SK",
+          "name": "Jur nad Hronom",
+          "country": "Slovensko",
+          "state": "Nitriansky kraj",
+          "county": "okres Levice",
+          "extent": [
+            18.5722856,
+            48.1476308,
+            18.6661811,
+            48.1097567
+          ]
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            18.6278816,
+            48.1255634
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "osm_type": "R",
+          "osm_id": 2217991,
+          "osm_key": "place",
+          "osm_value": "village",
+          "type": "city",
+          "countrycode": "SK",
+          "name": "Kalná nad Hronom",
+          "country": "Slovensko",
+          "state": "Nitriansky kraj",
+          "county": "okres Levice",
+          "extent": [
+            18.396728,
+            48.292235,
+            18.5389395,
+            48.1607045
+          ]
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            18.5185286,
+            48.1997294
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "osm_type": "R",
+          "osm_id": 2217831,
+          "osm_key": "place",
+          "osm_value": "village",
+          "type": "city",
+          "postcode": "935 57",
+          "countrycode": "SK",
+          "name": "Jur nad Hronom",
+          "country": "Slovensko",
+          "state": "Nitriansky kraj",
+          "county": "okres Levice",
+          "extent": [
+            18.5722856,
+            48.1476308,
+            18.6661811,
+            48.1097567
+          ]
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            18.6278816,
+            48.1255634
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "osm_type": "R",
+          "osm_id": 2217897,
+          "osm_key": "place",
+          "osm_value": "village",
+          "type": "city",
+          "countrycode": "SK",
+          "name": "Vyšné nad Hronom",
+          "country": "Slovensko",
+          "state": "Nitriansky kraj",
+          "county": "okres Levice",
+          "extent": [
+            18.5635885,
+            48.1847258,
+            18.6118503,
+            48.1491121
+          ]
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            18.5848651,
+            48.163514
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "osm_type": "R",
+          "osm_id": 2217985,
+          "osm_key": "place",
+          "osm_value": "village",
+          "type": "city",
+          "countrycode": "SK",
+          "name": "Vyšné nad Hronom",
+          "country": "Slovensko",
+          "state": "Nitriansky kraj",
+          "county": "okres Levice",
+          "extent": [
+            18.5635885,
+            48.1847258,
+            18.6118503,
+            48.1491121
+          ]
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            18.5848651,
+            48.163514
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "osm_type": "R",
+          "osm_id": 2265935,
+          "osm_key": "place",
+          "osm_value": "village",
+          "type": "district",
+          "postcode": "976 67",
+          "countrycode": "SK",
+          "name": "Závadka nad Hronom",
+          "country": "Slovensko",
+          "city": "Brezno",
+          "state": "Banskobystrický kraj",
+          "extent": [
+            19.8938458,
+            48.909081,
+            19.9772546,
+            48.781023
+          ]
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            19.9167455,
+            48.8501934
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "osm_type": "R",
+          "osm_id": 2218474,
+          "osm_key": "place",
+          "osm_value": "village",
+          "type": "city",
+          "countrycode": "SK",
+          "name": "Malá nad Hronom",
+          "country": "Slovensko",
+          "state": "Nitriansky kraj",
+          "county": "okres Nové Zámky",
+          "extent": [
+            18.6610699,
+            47.8726979,
+            18.7023656,
+            47.8347861
+          ]
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            18.6795793,
+            47.8547884
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "osm_type": "R",
+          "osm_id": 2218536,
+          "osm_key": "place",
+          "osm_value": "village",
+          "type": "city",
+          "countrycode": "SK",
+          "name": "Malá nad Hronom",
+          "country": "Slovensko",
+          "state": "Nitriansky kraj",
+          "county": "okres Nové Zámky",
+          "extent": [
+            18.6610699,
+            47.8726979,
+            18.7023656,
+            47.8347861
+          ]
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            18.6795793,
+            47.8547884
+          ]
+        }
+      }
+    ]
+  }
+]

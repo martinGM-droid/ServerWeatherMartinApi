@@ -1,63 +1,88 @@
-import { weatherData } from './index.js';
-export interface WeatherData {
-  latitude: number;
-  longitude: number;
-  generationtime_ms: number;
-  utc_offset_seconds: number;
-  timezone: string;
-  timezone_abbreviation: string;
-  elevation: number;
-  hourly_units: {
-    time: string;
-    temperature_2m: string;
-    precipitation_probability: string;
-    precipitation: string;
-    cloud_cover: string;
-  };
-  hourly: {
-    time: string[];
-    temperature_2m: number[];
-    precipitation_probability: number[];
-    precipitation: number[];
-    cloud_cover: number[];
-  };
+type TYPE =
+      | "city"
+      | "locality"
+      | "district"
+      | "suburb"
+      | "neighbourhood"
+      | "quarter"
+      | "farm"
+      | "house"
+      | "street"
+      | "amenity"
+      | "landuse"
+      | "tourism"
+      | "building";
+
+type OSM_VALUE =
+      | "city"
+      | "town"
+      | "village"
+      | "hamlet"
+      | "locality"
+      | "suburb"
+      | "neighbourhood"
+      | "quarter"
+      | "farm"
+      | "house"
+      | "apartment"
+      | "school"
+      | "hospital"
+      | "bank"
+      | "residential"
+      | "motorway"
+      | "forest"
+      | "industrial"
+      | "hotel"
+      | "museum";
+
+type OSM_KEY =
+      | "place"
+      | "building"
+      | "amenity"
+      | "highway"
+      | "landuse"
+      | "tourism";
+
+interface FeaturesData {
+      "type": "Feature",
+      "properties": {
+            "osm_type": string,
+            "osm_id": number,
+            "osm_key": OSM_KEY,
+            "osm_value": OSM_VALUE,
+            "type": TYPE,
+            "countrycode": string,
+            "name": string,
+            "country": string,
+            "city"?: string,
+            "state": string,
+            "county"?: "Всеволожский район",
+            "extent"?: [
+                  number,
+                  number,
+                  number,
+                  number
+            ]
+      },
+      "geometry": {
+            "type": "Point",
+            "coordinates": [
+                  number,
+                  number
+            ]
+      }
 }
 
-interface WeatherTimeObjectFrontiend{
-    time: string;
-    temperature_2m: number;
-    precipitation_probability: number;
-    precipitation: number;
-    cloud_cover: number;
+type Features = FeaturesData[]
+
+export type Place = [
+      {
+            "type": "FeatureCollection",
+            "features": Features
+      }
+]
+
+
+function parseAndFormatApiDataPlace(cashResponse:Place) {
+
 }
-
-export type WeatherTimeArrayFrontiend = WeatherTimeObjectFrontiend[];
-  
-
-
-
-export async function weatherByTimeObjectCreate():Promise<WeatherTimeArrayFrontiend>  {
-  const {
-    hourly: {
-      time,
-      temperature_2m,
-      precipitation_probability,
-      precipitation,
-      cloud_cover,
-    }
-  } = weatherData;
-  
-  const result: WeatherTimeArrayFrontiend = [];
-
-  for (let i = 0; i < time.length; i++) {
-    result.push({
-      time: time[i],
-      temperature_2m: temperature_2m[i],
-      precipitation_probability: precipitation_probability[i],
-      precipitation: precipitation[i],
-      cloud_cover: cloud_cover[i]
-    });
-  }
-  return result
-}
-

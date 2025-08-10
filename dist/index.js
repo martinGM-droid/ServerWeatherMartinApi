@@ -1,16 +1,31 @@
 import express from 'express';
-// import fs from 'fs/promises'; // добавь импорт
-import { fetchData } from './data-fetching.js';
-import { weatherByTimeObjectCreate } from './data-processing.js';
+import cors from 'cors';
+import { createLocationApiUrl } from './api-constructor.js';
+import { ApiManager } from './class-constructor.js';
+import { PORT, origin } from './config.js';
 const app = express();
-const PORT = 5000;
-app.get('/', (req, res) => {
-    res.send('Hello, world!');
+app.use(cors({
+    origin: origin
+}));
+app.get('/search', async (req, res) => {
+    const cash = [{
+            type: "FeatureCollection",
+            features: []
+        }];
+    const placeName = req.query.q;
+    const path = 'data/coordinates.json';
+    const urlSearchPlace = createLocationApiUrl(placeName);
+    const placeInfoClass = new ApiManager(urlSearchPlace, cash);
+    await placeInfoClass.getRequest();
+    await placeInfoClass.createFile(path);
+    setTimeout(() => {
+        console.log(urlSearchPlace);
+        console.log(cash);
+        console.log(cash.length);
+        // console.log(cash[0].feyatures)
+    }, 100);
+    res.status(200).json({ message: `Hello ${placeName}` });
 });
-// export const weatherData: WeatherData = await fetchData(53.66, 23.81);
-export const weatherData = await fetchData(53.67462, 23.82958);
-const weatherDataResult = await weatherByTimeObjectCreate();
-console.log(weatherDataResult);
 app.listen(PORT, () => {
     console.log(`Server running at http://localhost:${PORT}/`);
 });

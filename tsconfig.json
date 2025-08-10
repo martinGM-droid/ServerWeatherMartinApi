@@ -2,6 +2,7 @@
   "compilerOptions": {
     /* === Основные настройки компиляции === */
     "target": "ES2022",                   // Целевая версия JS, которую будет генерировать TypeScript
+    // "module": "commonjs",
     "module": "ES2022",                   // Тип модулей — ES (import/export). Совместим с "type": "module" в package.json
     "moduleResolution": "node",           // Как искать модули — по правилам Node.js
     "outDir": "./dist",                   // Папка для скомпилированных файлов
