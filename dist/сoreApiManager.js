@@ -1,5 +1,8 @@
 import { error } from 'console';
 import fs from 'fs/promises';
+import { ErrorLogStore, DebugError } from './debug.js';
+const logArch = ErrorLogStore.logArchive;
+const errVault = ErrorLogStore.errorVault;
 const statusCodeList = {
     success: {
         200: "OK",
@@ -28,22 +31,16 @@ const statusCodeList = {
         504: "Gateway Timeout",
     }
 };
-const ErrorLogStore = {
-    logArchive: {
-        filePath: 'Data saved in',
-        responseText: 'SERVER RESPONSE'
-    },
-    errorVault: {
-        invalidTypeError: 'Data error: the processed data type does not match the documentation.',
-        classMethodError: 'ApiManager--error',
-        responseError: 'SERVER ERROR'
-    }
-};
-//? >>>>>>>>>>
-//* Manager class for reusable use, created to quickly work with multiple API services <<<develop methods for generalized use>>>
-//? >>>>>>>>>>
+//? >>>>>>>>>>>>>>>>>>>>>>>>>>
+//! <<<<<<<<<<<<<<<<<<<<<<<<<<
+//* Manager class for reusable use, 
+//* created to quickly work with multiple API services,
+//* <<<develop methods for generalized use>>>
+//! <<<<<<<<<<<<<<<<<<<<<<<<<<
+//? >>>>>>>>>>>>>>>>>>>>>>>>>>>
 export class ApiManager {
     state = {}; //!  Use state to ensure correct operation of methods in case of errors in pillar methods.
+    instances = [];
     url;
     dataMediator;
     constructor(url, dataMediator) {
@@ -56,65 +53,89 @@ export class ApiManager {
             return this;
         }
         catch (error) {
-            this.#print(ErrorLogStore.errorVault.classMethodError, error, '>>>', 'error');
-            return this;
+            if (error instanceof DebugError) {
+                this.#print(errVault.classMethodError, error.message, '>>>', 'error');
+                DebugError.throw(errVault.classMethodError, error.statusCode);
+            }
+            else {
+                throw error; //* Just in case, so that TS knows all code paths are covered.
+            }
+        }
+        finally {
         }
     }
     ;
+    async multiRequests(url) {
+        const fabrycClass = async () => {
+            if (Array.isArray(url)) {
+                const count = url.length;
+                const classArr = [];
+                for (let i = 1; i < count; i++) {
+                    const DynamicClass = new ApiManager(url[i], this.dataMediator);
+                    await classArr.push(DynamicClass);
+                    await DynamicClass.getRequest();
+                    this.instances.push(DynamicClass);
+                }
+            }
+        };
+        await fabrycClass();
+    }
     async createFile(path) {
         const trigger = this.state.fetch.trigger;
         if (trigger) {
             await fs.writeFile(path, JSON.stringify(this.dataMediator, null, 2), 'utf-8');
-            this.#print(ErrorLogStore.logArchive.filePath, path, ':', 'log');
+            this.#print(logArch.filePath, path, ':', 'log');
         }
         else {
-            this.#print(ErrorLogStore.errorVault.classMethodError, this.state.fetch.error, '>>>', 'error');
+            this.#print(errVault.classMethodError, this.state.fetch.error, '>>>', 'error');
+        }
+    }
+    async multiCreateFile(pathPrefix) {
+        for (let i = 0; i < this.instances.length; i++) {
+            await this.instances[i].createFile(`${pathPrefix}${i + 1}.json`);
         }
     }
     async #fetch(url) {
         const res = await fetch(url);
-        // console.log(res.status, 'status')
-        // console.log(res.statusText, 'statusText')
         await this.#manageState(res.status, 'fetch');
         if (!res.ok) {
             await this.#manageState(res.status, 'fetch');
-            throw new Error(`${ErrorLogStore.errorVault.responseError}: ${res.status}`);
+            this.#print(`${errVault.responseError}: ${res.status}`, '', '>>>', 'error');
+            DebugError.throw(`${errVault.responseError}: ${res.status}`, res.status);
         }
         const data = await res.json();
         const arr = Array.isArray(data) ? data : [data];
-        this.dataMediator.splice(0, this.dataMediator.length, ...arr);
-        // this.#print(ErrorLogStore.logArchive.responseText, data, ':')
+        this.dataMediator.push(...arr);
+        // this.dataMediator.splice(0, this.dataMediator.length, ...arr);
     }
     async #manageState(resOrError, keyName) {
         let stateTracker;
         const processObject = async (obj) => {
-            if (typeof resOrError === 'number') {
-                if (obj.success.hasOwnProperty(resOrError)) {
-                    // console.log(obj.success[resOrError])
-                    stateTracker = true;
-                    if (!this.state[keyName]) {
+            if (typeof resOrError === 'number') { //? checking the type
+                if (obj.success.hasOwnProperty(resOrError)) { //* we check if there is a state, if not,
+                    if (!this.state[keyName]) { //* it creates it based on the conditions
                         this.state[keyName] = {
                             trigger: true,
                             error: null
                         };
                     }
+                    stateTracker = true;
                     this.state[keyName].trigger = stateTracker;
                     this.state[keyName].error = null;
                 }
-                if (obj.error.hasOwnProperty(resOrError)) {
-                    // console.log(obj.error[resOrError])
-                    stateTracker = false;
-                    if (!this.state[keyName]) {
+                if (obj.error.hasOwnProperty(resOrError)) { //* we check if there is a state, if not,
+                    if (!this.state[keyName]) { //* it creates it based on the conditions
                         this.state[keyName] = {
                             trigger: false,
                             error: null
                         };
                     }
+                    stateTracker = false;
                     this.state[keyName].trigger = stateTracker;
                     this.state[keyName].error = obj.error[resOrError];
                 }
             }
-            else {
+            else { //? if not that tupe
                 stateTracker = false;
                 if (!this.state[keyName]) {
                     this.state[keyName] = {

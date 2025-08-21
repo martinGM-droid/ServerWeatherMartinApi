@@ -1,0 +1,676 @@
+[
+  {
+    "type": "FeatureCollection",
+    "features": []
+  },
+  {
+    "type": "FeatureCollection",
+    "features": [
+      {
+        "type": "Feature",
+        "properties": {
+          "osm_type": "W",
+          "osm_id": 96838467,
+          "osm_key": "place",
+          "osm_value": "town",
+          "type": "city",
+          "postcode": "399140",
+          "countrycode": "RU",
+          "name": "Доброе",
+          "country": "Россия",
+          "state": "Липецкая область",
+          "county": "Добровский муниципальный округ",
+          "extent": [
+            39.7566842,
+            52.8889692,
+            39.8366086,
+            52.8392168
+          ]
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            39.8102066,
+            52.8613369
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "type": "FeatureCollection",
+    "features": [
+      {
+        "type": "Feature",
+        "properties": {
+          "osm_type": "R",
+          "osm_id": 18373618,
+          "osm_key": "place",
+          "osm_value": "village",
+          "type": "city",
+          "countrycode": "UA",
+          "name": "Доброе",
+          "country": "Україна",
+          "state": "Республика Крым",
+          "county": "Сімферопольський район",
+          "extent": [
+            34.2269571,
+            44.8833561,
+            34.2751712,
+            44.8486859
+          ]
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            34.2369178,
+            44.8696337
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "osm_type": "W",
+          "osm_id": 242006468,
+          "osm_key": "place",
+          "osm_value": "village",
+          "type": "city",
+          "countrycode": "RU",
+          "name": "Доброе",
+          "country": "Россия",
+          "state": "Калининградская область",
+          "county": "Гурьевский муниципальный округ",
+          "extent": [
+            20.7424947,
+            54.7508005,
+            20.7823574,
+            54.7403685
+          ]
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            20.7494693,
+            54.7459787
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "osm_type": "R",
+          "osm_id": 2548538,
+          "osm_key": "place",
+          "osm_value": "village",
+          "type": "city",
+          "countrycode": "RU",
+          "name": "Доброе",
+          "country": "Россия",
+          "state": "Калужская область",
+          "county": "Жуковский район",
+          "extent": [
+            36.6114726,
+            55.0796459,
+            36.6288759,
+            55.0692636
+          ]
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            36.6255494,
+            55.0772287
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "osm_type": "W",
+          "osm_id": 1318112342,
+          "osm_key": "place",
+          "osm_value": "village",
+          "type": "city",
+          "countrycode": "RU",
+          "name": "Доброе Поле",
+          "country": "Россия",
+          "state": "Омская область",
+          "county": "Москаленский район",
+          "extent": [
+            71.8070805,
+            54.8810353,
+            71.8249279,
+            54.8681862
+          ]
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            71.816505,
+            54.875927
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "osm_type": "R",
+          "osm_id": 18350529,
+          "osm_key": "place",
+          "osm_value": "village",
+          "type": "city",
+          "countrycode": "RU",
+          "name": "Доброе",
+          "country": "Россия",
+          "state": "Тульская область",
+          "county": "Суворовский район",
+          "extent": [
+            36.322056,
+            54.1867618,
+            36.3480091,
+            54.1751523
+          ]
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            36.3357631,
+            54.1806144
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "osm_type": "R",
+          "osm_id": 7509629,
+          "osm_key": "place",
+          "osm_value": "village",
+          "type": "city",
+          "countrycode": "RU",
+          "name": "Доброе",
+          "country": "Россия",
+          "state": "Белгородская область",
+          "county": "Грайворонский муниципальный округ",
+          "extent": [
+            35.6720155,
+            50.5292668,
+            35.7061842,
+            50.511572
+          ]
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            35.6886533,
+            50.5222984
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "type": "FeatureCollection",
+    "features": [
+      {
+        "type": "Feature",
+        "properties": {
+          "osm_type": "W",
+          "osm_id": 106489947,
+          "osm_key": "place",
+          "osm_value": "hamlet",
+          "type": "district",
+          "countrycode": "RU",
+          "name": "Доброе",
+          "country": "Россия",
+          "city": "сельское поселение Деревня Прудки",
+          "state": "Калужская область",
+          "county": "Малоярославецкий район",
+          "extent": [
+            36.441866,
+            54.8040532,
+            36.4541881,
+            54.7958588
+          ]
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            36.4485541,
+            54.8002542
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "osm_type": "W",
+          "osm_id": 380289633,
+          "osm_key": "place",
+          "osm_value": "hamlet",
+          "type": "district",
+          "countrycode": "RU",
+          "name": "Доброе Поле",
+          "country": "Россия",
+          "city": "Сальновский сельсовет",
+          "state": "Курская область",
+          "county": "Хомутовский район",
+          "extent": [
+            34.3985491,
+            51.9630528,
+            34.420066,
+            51.9429415
+          ]
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            34.4094487,
+            51.9526495
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "osm_type": "N",
+          "osm_id": 1530172872,
+          "osm_key": "place",
+          "osm_value": "hamlet",
+          "type": "district",
+          "countrycode": "RU",
+          "name": "Доброе",
+          "country": "Россия",
+          "city": "Бунинский сельсовет",
+          "state": "Курская область",
+          "county": "Солнцевский район"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            36.7092835,
+            51.6291773
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "osm_type": "W",
+          "osm_id": 599705636,
+          "osm_key": "place",
+          "osm_value": "hamlet",
+          "type": "district",
+          "countrycode": "RU",
+          "name": "Доброе",
+          "country": "Россия",
+          "state": "Тверская область",
+          "county": "Пеновский муниципальный округ",
+          "extent": [
+            32.023362,
+            57.0959529,
+            32.037565,
+            57.0908619
+          ]
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            32.0338055,
+            57.0945511
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "osm_type": "W",
+          "osm_id": 134678467,
+          "osm_key": "place",
+          "osm_value": "hamlet",
+          "type": "district",
+          "countrycode": "RU",
+          "name": "Доброе",
+          "country": "Россия",
+          "state": "Московская область",
+          "county": "Пушкинский городской округ",
+          "extent": [
+            37.9797061,
+            56.0691271,
+            37.9840904,
+            56.0650638
+          ]
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            37.9825126,
+            56.0670774
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "osm_type": "W",
+          "osm_id": 346556316,
+          "osm_key": "place",
+          "osm_value": "hamlet",
+          "type": "district",
+          "countrycode": "RU",
+          "name": "Доброе",
+          "country": "Россия",
+          "city": "Нагибовское сельское поселение",
+          "state": "Еврейская автономная область",
+          "county": "Октябрьский район",
+          "extent": [
+            131.6686749,
+            47.7722408,
+            131.6873488,
+            47.7582319
+          ]
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            131.6740622,
+            47.765644
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "osm_type": "R",
+          "osm_id": 3765027,
+          "osm_key": "place",
+          "osm_value": "hamlet",
+          "type": "district",
+          "countrycode": "RU",
+          "name": "Доброе",
+          "country": "Россия",
+          "state": "Смоленская область",
+          "county": "Угранский муниципальный округ",
+          "extent": [
+            34.6845363,
+            54.8528882,
+            34.7207178,
+            54.8463429
+          ]
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            34.7004714,
+            54.8490297
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "osm_type": "N",
+          "osm_id": 1541501573,
+          "osm_key": "place",
+          "osm_value": "hamlet",
+          "type": "district",
+          "countrycode": "RU",
+          "name": "Доброе Начало",
+          "country": "Россия",
+          "state": "Тамбовская область",
+          "county": "Жердевский муниципальный округ"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            41.793816,
+            51.772793
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "osm_type": "R",
+          "osm_id": 17351756,
+          "osm_key": "place",
+          "osm_value": "hamlet",
+          "type": "district",
+          "countrycode": "RU",
+          "name": "Доброе Поле",
+          "country": "Россия",
+          "state": "Псковская область",
+          "county": "Порховский муниципальный округ",
+          "extent": [
+            29.0240657,
+            57.4445626,
+            29.0313171,
+            57.4418014
+          ]
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            29.028885,
+            57.443184
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "osm_type": "W",
+          "osm_id": 88379937,
+          "osm_key": "place",
+          "osm_value": "hamlet",
+          "type": "district",
+          "countrycode": "RU",
+          "name": "Доброе",
+          "country": "Россия",
+          "city": "Бахметьевское сельское поселение",
+          "state": "Тульская область",
+          "county": "Богородицкий район",
+          "extent": [
+            38.4945915,
+            53.648187,
+            38.508957,
+            53.6408094
+          ]
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            38.5046208,
+            53.644078
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "osm_type": "N",
+          "osm_id": 496839866,
+          "osm_key": "place",
+          "osm_value": "hamlet",
+          "type": "district",
+          "postcode": "309262",
+          "countrycode": "RU",
+          "name": "Доброе",
+          "country": "Россия",
+          "state": "Белгородская область",
+          "county": "Шебекинский муниципальный округ"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            36.9881028,
+            50.4702711
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "osm_type": "W",
+          "osm_id": 691215063,
+          "osm_key": "place",
+          "osm_value": "hamlet",
+          "type": "district",
+          "postcode": "172741",
+          "countrycode": "RU",
+          "name": "Доброе",
+          "country": "Россия",
+          "state": "Тверская область",
+          "county": "Осташковский муниципальный округ",
+          "extent": [
+            33.0804784,
+            57.4264093,
+            33.0925944,
+            57.4203993
+          ]
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            33.0877232,
+            57.4250288
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "osm_type": "N",
+          "osm_id": 1640516038,
+          "osm_key": "place",
+          "osm_value": "hamlet",
+          "type": "district",
+          "postcode": "301150",
+          "countrycode": "RU",
+          "name": "Доброе Семя",
+          "country": "Россия",
+          "city": "Воскресенское сельское поселение",
+          "state": "Тульская область",
+          "county": "Дубенский район"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            37.2038403,
+            54.1128193
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "type": "FeatureCollection",
+    "features": [
+      {
+        "type": "Feature",
+        "properties": {
+          "osm_type": "N",
+          "osm_id": 11194228232,
+          "osm_key": "place",
+          "osm_value": "locality",
+          "type": "locality",
+          "countrycode": "RU",
+          "name": "Урочище Доброе",
+          "country": "Россия",
+          "state": "Сахалинская область",
+          "county": "Курильский муниципальный округ"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            147.2037342,
+            44.7237586
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "osm_type": "N",
+          "osm_id": 747052817,
+          "osm_key": "place",
+          "osm_value": "locality",
+          "type": "locality",
+          "countrycode": "RU",
+          "name": "урочище Доброе",
+          "country": "Россия",
+          "district": "Лазаревский внутригородской район",
+          "state": "Краснодарский край",
+          "county": "городской округ Сочи"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            39.4955192,
+            44.035158
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "type": "FeatureCollection",
+    "features": [
+      {
+        "type": "Feature",
+        "properties": {
+          "osm_type": "N",
+          "osm_id": 829046187,
+          "osm_key": "place",
+          "osm_value": "suburb",
+          "type": "district",
+          "postcode": "238590",
+          "countrycode": "RU",
+          "name": "Доброе",
+          "country": "Россия",
+          "city": "Пионерский",
+          "state": "Калининградская область",
+          "county": "Пионерский городской округ"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            20.2240599,
+            54.9329106
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "type": "FeatureCollection",
+    "features": [
+      {
+        "type": "Feature",
+        "properties": {
+          "osm_type": "N",
+          "osm_id": 3487260093,
+          "osm_key": "place",
+          "osm_value": "neighbourhood",
+          "type": "locality",
+          "postcode": "600000",
+          "countrycode": "RU",
+          "name": "Доброе",
+          "country": "Россия",
+          "city": "Владимир",
+          "district": "Фрунзенский район",
+          "state": "Владимирская область",
+          "county": "городской округ Владимир"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            40.4660085,
+            56.166909
+          ]
+        }
+      }
+    ]
+  }
+]
