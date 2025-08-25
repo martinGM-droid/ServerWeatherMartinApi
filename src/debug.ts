@@ -154,13 +154,16 @@ class DataTimeManager {
   }
 
   mergeData(spReRa: SpeedRepoRank) {
-    this.repository.push(...Object.values(spReRa))
+    this.repository.push(spReRa)
     return this.repository
   }
-
-
+  // mergeData(spReRa: SpeedRepoRank) {
+  //   this.repository.push(...Object.values(spReRa))
+  //   return this.repository
+  // }
+  
   fileCreate() {
-    
+
   }
 }
 

@@ -1,4 +1,4 @@
-import { error } from 'console';
+import { error, log } from 'console';
 import fs from 'fs/promises';
 import { IErrorLogStore, ErrorLogStore, DebugError } from './debug.js';
 import { TimeDetector } from './debug.js';
@@ -102,6 +102,7 @@ export class ApiManager<T extends unknown[]> {
     this.dataMediator = dataMediator
   }
   async getRequest() { //*Methods pillars >>>> 
+    console.log('Get')
     try {
       await this.#fetch(this.url);
       return this
@@ -118,6 +119,7 @@ export class ApiManager<T extends unknown[]> {
   };
 
   async multiRequests(url: MyltUrl) {
+    console.log('Mult')
     const fabrycClass = async () => {
       if (Array.isArray(url)) {
         const count = url.length
@@ -125,6 +127,7 @@ export class ApiManager<T extends unknown[]> {
         for (let i = 1; i < count; i++) {
           const DynamicClass = new ApiManager(url[i], this.dataMediator)
           await classArr.push(DynamicClass)
+          console.log('Get-Mult') 
           await DynamicClass.getRequest()
           this.instances.push(DynamicClass);
         }

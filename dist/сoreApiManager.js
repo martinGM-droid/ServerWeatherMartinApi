@@ -48,6 +48,7 @@ export class ApiManager {
         this.dataMediator = dataMediator;
     }
     async getRequest() {
+        console.log('Get');
         try {
             await this.#fetch(this.url);
             return this;
@@ -66,6 +67,7 @@ export class ApiManager {
     }
     ;
     async multiRequests(url) {
+        console.log('Mult');
         const fabrycClass = async () => {
             if (Array.isArray(url)) {
                 const count = url.length;
@@ -73,6 +75,7 @@ export class ApiManager {
                 for (let i = 1; i < count; i++) {
                     const DynamicClass = new ApiManager(url[i], this.dataMediator);
                     await classArr.push(DynamicClass);
+                    console.log('Get-Mult');
                     await DynamicClass.getRequest();
                     this.instances.push(DynamicClass);
                 }
