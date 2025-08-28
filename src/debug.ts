@@ -193,14 +193,33 @@ export const ErrorLogStore: IErrorLogStore = { //* add if necessary logs or erro
   }
 }
 
-export class DebugError extends Error {
-  statusCode: number;
-  constructor(message: string, statusCode: number = 500, nameError: string = "CustomError") {
-    super(message);
-    this.name = nameError;
-    this.statusCode = statusCode;
+export class DebugError extends Error { 
+  statusCode: number; //* Additional field to store HTTP status codes (e.g., 404, 500)
+
+  constructor(
+    message: string, 
+    statusCode: number = 500, //! Default to internal server error
+    nameError: string = "CustomError" //* Custom name for better error identification
+  ) {
+    super(message); //! Call the parent Error constructor
+    this.name = nameError; //* Set custom error name
+    this.statusCode = statusCode; //* Save the HTTP status code
   }
-  static throw(message: string, statusCode?: number, nameError?: string): never {
+
+  static return(
+    message: string, 
+    statusCode?: number, 
+    nameError?: string
+  ){
+   return new DebugError(message, statusCode, nameError);
+  }
+
+  static throw(
+    message: string, 
+    statusCode?: number, 
+    nameError?: string
+  ): never {
+    //* Static method to throw this error without manually creating an instance
     throw new DebugError(message, statusCode, nameError);
   }
 }

@@ -93,13 +93,19 @@ export const ErrorLogStore = {
     }
 };
 export class DebugError extends Error {
-    statusCode;
-    constructor(message, statusCode = 500, nameError = "CustomError") {
-        super(message);
-        this.name = nameError;
-        this.statusCode = statusCode;
+    statusCode; //* Additional field to store HTTP status codes (e.g., 404, 500)
+    constructor(message, statusCode = 500, //! Default to internal server error
+    nameError = "CustomError" //* Custom name for better error identification
+    ) {
+        super(message); //! Call the parent Error constructor
+        this.name = nameError; //* Set custom error name
+        this.statusCode = statusCode; //* Save the HTTP status code
+    }
+    static return(message, statusCode, nameError) {
+        return new DebugError(message, statusCode, nameError);
     }
     static throw(message, statusCode, nameError) {
+        //* Static method to throw this error without manually creating an instance
         throw new DebugError(message, statusCode, nameError);
     }
 }

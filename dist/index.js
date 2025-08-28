@@ -1,10 +1,10 @@
 import express from 'express';
 import cors from 'cors';
-import { createLocationApiUrl, createWeatherApiUrl, createLocationApiUrls } from './api-constructor.js';
+import { createLocationApiUrl, queryTags } from './api-constructor.js';
 import { ApiManager } from './сoreApiManager.js';
 import { PORT, origin } from './config.js';
 import { parseAndFormatApiDataPlace } from './data-processing.js';
-import { TestPost, DebugError } from './debug.js';
+import { DebugError } from './debug.js';
 const app = express();
 app.use(express.json());
 app.use(cors({
@@ -12,28 +12,21 @@ app.use(cors({
 }));
 app.get('/search', async (req, res) => {
     try {
-        const cash = [];
         const placeName = req.query.q;
         const path = 'data/coordinates.json';
         const pathPrefix = 'data/coordinates.json';
         const urlSearchPlace = createLocationApiUrl(placeName);
-        const urlsSearchPlace = createLocationApiUrls(placeName);
-        const placeInfoClass = new ApiManager(urlSearchPlace, cash);
-        await placeInfoClass.getRequest();
-        await placeInfoClass.createFile(path);
-        await placeInfoClass.multiRequests(urlsSearchPlace);
-        await placeInfoClass.multiCreateFile(pathPrefix);
-        const results = parseAndFormatApiDataPlace(cash);
-        // setTimeout(() => {
-        //   console.log(urlSearchPlace)
-        //   console.log(cash)
-        //   console.log(cash.length)
-        //   console.log('FILT', results)
-        // }, 100);
-        console.log('start', cash, 'End');
-        console.log('test', results[0]);
-        console.log('testAll', results);
-        await TestPost([results[0]], PORT, 'weather');
+        const PlaceInfoClass = new ApiManager(urlSearchPlace);
+        const placeInfo = await PlaceInfoClass.getRequest(queryTags);
+        const placeInfoData = placeInfo.data;
+        const placeInfoDebug = placeInfo.debugError;
+        const placeInfoError = placeInfo.error;
+        console.log('DATA', placeInfoData);
+        console.log('DEBUG', placeInfoDebug);
+        console.log('ERROR', placeInfoError);
+        const results = parseAndFormatApiDataPlace(placeInfoData);
+        console.log('TEST', results);
+        console.log('TEST-L', results.length);
         res.status(200).json(results);
     }
     catch (error) {
@@ -46,19 +39,19 @@ app.get('/search', async (req, res) => {
         }
     }
 });
-app.post('/weather', async (req, res) => {
-    const cash = [];
-    const path = 'data/weather.json';
-    const data = req.body;
-    console.log('data:', data);
-    const longitude = data[0].region_coordinates.longitude;
-    const latitude = data[0].region_coordinates.latitude;
-    const weatherReqwest = createWeatherApiUrl(longitude, latitude);
-    const weatherInfoClass = new ApiManager(weatherReqwest, cash);
-    await weatherInfoClass.getRequest();
-    await weatherInfoClass.createFile(path);
-    res.status(200).json({ message: 'weather by region' });
-});
+// app.post('/weather', async (req, res) => {
+//   const cash: DataStore<WeatherApiResponse[]> = [];
+//   const path = 'data/weather.json'
+//   const data: [GeoPoint] = req.body;
+//   console.log('data:', data)
+//   const longitude = data[0].region_coordinates.longitude
+//   const latitude = data[0].region_coordinates.latitude
+//   const weatherReqwest = createWeatherApiUrl(longitude, latitude)
+//   const weatherInfoClass = new ApiManager<DataStore<WeatherApiResponse[]>>(weatherReqwest, cash)
+//   await weatherInfoClass.getRequest()
+//   await weatherInfoClass.createFile(path)
+//   res.status(200).json({ message: 'weather by region' })
+// });
 app.listen(PORT, () => {
     console.log(`Server running at http://localhost:${PORT}/`);
 });
