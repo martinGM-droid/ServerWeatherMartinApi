@@ -30,6 +30,7 @@ app.get('/search', async (req, res) => {
     console.log('TEST',results)
     console.log('TEST-L',results.length)
     res.status(200).json(results);
+    await TestPost([results[0]],PORT, 'weather')
   } catch (error) {
     if (error instanceof DebugError) {
       res.status(error.statusCode).json({ error: error.message })
