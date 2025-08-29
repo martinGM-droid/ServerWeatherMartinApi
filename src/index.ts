@@ -42,19 +42,18 @@ app.get('/search', async (req, res) => {
 
 
 
-// app.post('/weather', async (req, res) => {
-//   const cash: DataStore<WeatherApiResponse[]> = [];
-//   const path = 'data/weather.json'
-//   const data: [GeoPoint] = req.body;
-//   console.log('data:', data)
-//   const longitude = data[0].region_coordinates.longitude
-//   const latitude = data[0].region_coordinates.latitude
-//   const weatherReqwest = createWeatherApiUrl(longitude, latitude)
-//   const weatherInfoClass = new ApiManager<DataStore<WeatherApiResponse[]>>(weatherReqwest, cash)
-//   await weatherInfoClass.getRequest()
-//   await weatherInfoClass.createFile(path)
-//   res.status(200).json({ message: 'weather by region' })
-// });
+app.post('/weather', async (req, res) => {
+  const cash: DataStore<WeatherApiResponse[]> = [];
+  const path = 'data/weather.json'
+  const data: [GeoPoint] = req.body;
+  console.log('data:', data)
+  const longitude = data[0].region_coordinates.longitude
+  const latitude = data[0].region_coordinates.latitude
+  const weatherReqwest = createWeatherApiUrl(longitude, latitude)
+  const weatherInfoClass = new ApiManager<DataStore<WeatherApiResponse[]>>(weatherReqwest, cash)
+  await weatherInfoClass.getRequest()
+  res.status(200).json({ message: 'weather by region' })
+});
 
 app.listen(PORT, () => {
   console.log(`Server running at http://localhost:${PORT}/`);
